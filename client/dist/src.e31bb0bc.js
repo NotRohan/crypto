@@ -46701,18 +46701,32 @@ var App = /*#__PURE__*/function (_Component) {
           balance = _this$state$walletInf.balance;
       return _react.default.createElement("div", {
         className: "App"
-      }, _react.default.createElement("img", {
-        className: "logo",
-        src: _logo.default
-      }), _react.default.createElement("br", null), _react.default.createElement("div", null, "Welcome to the NotBitcoin"), _react.default.createElement("br", null), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
+      }, _react.default.createElement("div", {
+        style: {
+          fontSize: '64px'
+        }
+      }, _react.default.createElement("b", null, "NotBitcoin")), _react.default.createElement("br", null), _react.default.createElement("div", {
+        style: {
+          display: 'flex',
+          flexDirection: 'column'
+        }
+      }, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/Blocks"
-      }, "Blocks")), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
+      }, "View NotBitcoin"), _react.default.createElement("br", null), _react.default.createElement("br", null)), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/conduct-transaction"
-      }, "Conduct a transaction")), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
+      }, "Create Transaction"), _react.default.createElement("br", null), _react.default.createElement("br", null)), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/transaction-pool"
-      }, "Transaction Pool")), _react.default.createElement("br", null), _react.default.createElement("div", {
+      }, "Transaction Pool"))), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "walletInfo"
-      }, _react.default.createElement("div", null, "Address: ", address), _react.default.createElement("div", null, "Balance: ", balance)));
+      }, _react.default.createElement("div", null, _react.default.createElement("b", {
+        style: {
+          fontSize: '32px'
+        }
+      }, "Address:"), _react.default.createElement("br", null), " ", address), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("div", null, _react.default.createElement("b", {
+        style: {
+          fontSize: '32px'
+        }
+      }, "balance:"), _react.default.createElement("br", null), " ", balance)));
     }
   }]);
 
@@ -47127,7 +47141,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50040" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49892" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

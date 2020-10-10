@@ -17,23 +17,27 @@ class App extends Component{
     const { address, balance } = this.state.walletInfo;
     return (
       <div className='App'>
-        <img className='logo' src={logo}></img>
+        <div style={{ fontSize: '64px' }}><b>NotBitcoin</b></div>
         <br />
-        <div>Welcome to the NotBitcoin</div>
-        <br />
-        <div>
-          <Link to='/Blocks'>Blocks</Link>
-        </div>
-        <div>
-          <Link to='/conduct-transaction'>Conduct a transaction</Link>
-        </div>
-        <div>
-          <Link to='/transaction-pool'>Transaction Pool</Link>
+        <div style={{ display:'flex', flexDirection: 'column' }}>
+          <div>
+            <Link to='/Blocks'>View NotBitcoin</Link>
+            <br />
+            <br />
+          </div>
+          <div>
+            <Link to='/conduct-transaction'>Create Transaction</Link>
+            <br />
+            <br />
+          </div>
+          <div>
+            <Link to='/transaction-pool'>Transaction Pool</Link>
+          </div>
         </div>
         <br />
         <div className='walletInfo'>
-          <div>Address: {address}</div>
-          <div>Balance: {balance}</div>
+          <div><b style={{ fontSize: '32px' }}>Address:</b><br /> {address}</div><br /><br />
+          <div><b style={{ fontSize: '32px' }}>balance:</b><br /> {balance}</div>
         </div>
       </div>
     )
